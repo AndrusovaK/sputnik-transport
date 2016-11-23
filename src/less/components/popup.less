@@ -1,0 +1,182 @@
+/* overlay at start */
+.mfp-fade.mfp-bg {
+	opacity : 0;
+
+	-webkit-transition : all .15s ease-out;
+	transition : all .15s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity : .8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity : 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity : 0;
+
+	-webkit-transition : all .15s ease-out;
+	transition : all .15s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity : 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity : 0;
+}
+
+.mfp-zoom-out-cur {
+	cursor : default;
+}
+
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close,
+.mfp-close-btn-in .mfp-close {
+	cursor : pointer;
+	font-family: 'Sf UI Display', sans-serif;
+	font-weight: 100;
+	font-size: 65px;
+	right: -55px;
+	top: 10px;
+}
+
+.mfp-close-btn-in .mfp-close {
+	right: 0;
+	top: 0;
+	font-size: 100px;
+	color: #ffffff;
+}
+
+.mfp-figure:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	border: 1px solid @color__gold;
+	right: -18px;
+	bottom: 22px;
+	top: 56px;
+	z-index: -1;
+}
+
+.popup {
+	position: relative;
+	width: auto;
+	box-sizing: border-box;
+	max-width: 476px;
+	margin: 20px auto;
+	padding: 56px 52px 0;
+	color: @text-color;
+	background: transparent;
+	font-size: 16px;
+	
+	&__inner {
+		background: #fff;
+		padding: 40px;
+	}
+
+	&__title {
+		font-size: 48px;
+		line-height: 1em;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		line-height: 24px;
+	}
+	
+	.input-text {
+		color: @text-color;
+		margin-right: 0;
+		width: 100%;
+		font-size: 16px;
+		border-color: #dcdcdc;
+		padding: 17px 20px;
+		margin-bottom: 20px;
+
+		&::placeholder {
+			color: @text-color;
+			font-weight: 300;
+			opacity: 1;
+		}
+	}
+
+	.btn--square {
+		width: 100%;
+
+		&:hover {
+			background-color: lighten(@color__gold, 5%);
+		}
+	}
+
+	&--product {
+		width: 824px;
+		max-width: 824px;
+		padding-top: 40px;
+
+		.popup__title {
+			font-family: 'GothamPro', sans-serif;
+			font-weight: 300;
+			margin-bottom: 36px;
+		}
+
+		.popup__image {
+			float: left;
+			width: 240px;
+			margin-right: 20px;
+		}
+		
+		.popup__product-description {
+			float: left;
+			width: 375px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+
+		.popup__form {
+			height: 240px;
+			background: #000000;
+			color: #fff;
+			padding: 40px;
+		}
+
+		.popup__form-inner {
+			float: left;
+		}
+
+		.js-form {
+			float: right;
+			width: 320px;
+		}
+
+		.popup__form-title {
+			font-size:30px;
+			color: #fff;
+			margin-bottom: 18px;
+		}
+
+		.popup__form-text {
+			line-height: 24px;
+			font-size: 16px;
+		}
+
+		.input-text {
+			border-color: @color__gold;
+			color: #fff;
+
+			&::placeholder {
+				color: @color__white;
+				font-weight: 300;
+				opacity: 1;
+			}
+		}
+
+		.btn--square {
+			font-size: 22px;
+			padding: 30px;
+		}
+	}
+}

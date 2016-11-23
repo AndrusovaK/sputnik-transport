@@ -1,0 +1,68 @@
+.container {
+	padding: 8rem 6rem 2rem 28rem;
+
+	.media-lg({
+		padding-left: 34rem;
+		padding-right: 13.75rem;
+	});
+
+	&--smallpadding {
+		padding-top: 2.2rem;
+	}
+
+	&__inner {
+		position: absolute;
+		top: 11.2rem;
+		bottom: 3.4rem;
+		left: 28rem;
+		right: 6rem;
+
+		&.hide {
+			opacity: 0;
+			height: 0;
+		}
+
+		.media-lg({
+			left: 34rem;
+			right: 13.75rem;
+		});
+
+		&--smalltop {
+			top: 9rem;
+		}
+	}
+}
+
+.row {
+	height: 50%;
+	margin: 0 -1.25rem;
+	font-size: 0;
+}
+
+.col-3 {
+	display: inline-block;
+	vertical-align: top;
+	width: 25%;
+	padding: 0 1.25rem;
+	font-size: @font-size;
+	text-align: left;
+}
+
+// Переопределяем стили плагина скролла
+
+.fp-tableCell {
+	vertical-align: top;
+}
+
+.slide 	.fp-tableCell {
+	position: relative;
+}
+
+.clearfix:before, .clearfix:after {
+	content : " ";
+
+	display : table;
+}
+.clearfix:after {
+	clear : both;
+}
