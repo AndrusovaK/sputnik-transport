@@ -4,7 +4,7 @@
 
 
 .btn {
-  display: block;
+  display: inline-block;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -12,42 +12,39 @@
   user-select: none;
   font-weight: 700;
   padding: @btn-padding;
-  font-size: @font-size--medium;
+  font-size: @font-size--small;
   line-height: @btn-line-height;
-  background-color: transparent;
+  background-color: @color__red;
   color: @color__white;
-  border: 2px solid @color__gold;
-  border-radius: 2.8rem ~"/" 2.8rem;
+  border: 3px solid @color__red;
+  border-radius: 2px;
   text-decoration: none;
   transition: all 0.3s;
 
   // &--hover,
   &:hover {
-    color: @color__white;
-    background: @color__gold;
+    background: transparent;
   }
 
   &:active {
-    background: @color__gold;
+    background: transparent;
   }
 }
 
-.btn--square {
-  .btn();
-  border-radius: @border-radius;
-  background-color: @color__gold;
-  text-transform: uppercase;
-  width: 24rem;
-  font-size: 1.4rem;
-  letter-spacing: 0.2em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 2rem 3rem;
-  
-  &:hover {
-    background-color: transparent;
-  }
+.btn--transparent {
+  background-color: transparent;
 
-  .media-full({width: 20rem;})
+  &:hover {
+    background-color: @color__red;
+  }
+}
+
+.btn--color-gray {
+  color: #ffffff;
+
+  &:hover {
+    color: @color__gray-dark;
+  }
 }
 
 
