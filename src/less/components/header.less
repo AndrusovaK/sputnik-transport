@@ -1,0 +1,78 @@
+.page-header {
+	padding: 20px 0 60px;
+	background: url(../img/bg_header.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	color: #ffffff;
+
+	.media-tablet({ padding: 35px 0 125px;});
+
+	.contacts {
+		text-align: right;
+	}
+
+	.phone {
+		font-size: @font-size--medium;
+		font-weight: 300;
+
+		span {
+			font-weight: 900;
+		}
+	}
+
+	.email {
+		color: @color__red;
+	}
+
+	.promo__text {
+		max-width: 480px;
+
+		.media-tablet({.bold()});
+	}
+
+	.promo__text--bold {
+		margin-bottom: 24px;
+	}
+
+	.promo__platon .promo__text--small{
+		position: relative;
+		padding-left: 80px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url(../img/icon_platon.png) no-repeat 50% 50%;
+			background-size: contain;
+			width: 62px;
+			height: 52px;
+		}
+	}
+
+	.promo__platon .promo__text {
+		.media-tablet({ font-size: 16px;});
+		.media-full({ font-size: 18px;});
+	}
+
+	.btn {
+		.media-tablet({.btn--transparent();});
+	}
+}
+
+
+
+.logo {
+	&__image {
+		display: inline-block;
+		vertical-align: middle;
+		height: 70px;
+		margin-right: 9px;
+
+		.media-tablet({ margin-right: 13px;})
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}

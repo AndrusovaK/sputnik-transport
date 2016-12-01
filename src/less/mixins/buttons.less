@@ -5,19 +5,19 @@
 
 .btn {
   display: inline-block;
+  height: 40px;
+  line-height: 34px;
+  padding: @btn-padding;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
   font-weight: 700;
-  padding: @btn-padding;
   font-size: @font-size--small;
-  line-height: @btn-line-height;
   background-color: @color__red;
   color: @color__white;
   border: 3px solid @color__red;
-  border-radius: 2px;
   text-decoration: none;
   transition: all 0.3s;
 
@@ -29,6 +29,15 @@
   &:active {
     background: transparent;
   }
+
+  .media-tablet({
+    font-size: @font-size;
+    height: 58px;
+    line-height: 52px;
+    padding: @btn-padding--medium;
+  });
+
+  .media-full({ width: 300px; height: 80px; line-height: 74px; padding: @btn-padding--large;});
 }
 
 .btn--transparent {

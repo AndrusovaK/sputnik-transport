@@ -10,18 +10,37 @@ $(document).ready(function() {
 		infinite: false
 	});
 
-	$('.services__slider').slick({
-		prevArrow: $('.services__prev'),
-		nextArrow: $('.services__next'),
-		slidesToShow: 3,
+	$('.services-slider').slick({
+		prevArrow: $('.services-slider__prev'),
+		nextArrow: $('.services-slider__next'),
+		slidesToShow: 4,
 		slidesToScroll: 1,
-		infinite: false
+		responsive: [
+			{
+				breakpoint: 1540,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 });
 
 
 // Яндекс карта
-ymaps.ready(init);
+/*ymaps.ready(init);
 var map;
 
 function init() {
@@ -51,4 +70,4 @@ function init() {
 	map.geoObjects.add(placemark);
 	map.behaviors.disable('scrollZoom');
 	placemark.balloon.open();
-}
+}*/
