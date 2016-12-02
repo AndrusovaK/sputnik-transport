@@ -1,0 +1,76 @@
+.about-us {
+  padding-top: 60px;
+  padding-bottom: 10px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__wrapper:before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    height: 195px;
+    width: 154px;
+    background: url(../img/chemodan.png) no-repeat 50% 50%;
+    background-size: contain;
+    z-index: -1;
+    display: none;
+
+    .media-lg({ display: block; left: -185px;});
+    .media-full({ left: -335px; height: 248px; width: 258px; top: 60px;});
+  }
+
+  &__numbers {
+    margin-bottom: 22px;
+    font-size: 0;
+  }
+
+  &__number {
+    display: inline-block;
+    margin-right: 26px;
+    vertical-align: bottom;
+    margin-bottom: 18px;
+    font-size: 14px;
+
+    @media(min-width: 768px) {
+      margin-right: 0;
+      text-align: center;
+      font-size: 17px;
+      font-weight: bold;
+      margin-top: 68px;
+
+      &:first-child {
+        width: 17%;
+      }
+
+      &:nth-child(2) {
+        width: 45%;
+      }
+
+      &:last-child {
+        width: 38%;
+      }
+    }
+
+    .media-lg({ font-size: 24px; margin-bottom: 58px;});
+
+    span {
+      font-size: 25px;
+      color: @color__red;
+      font-weight: 700;
+      margin-right: 10px;
+
+      .media-tablet({ font-size: 68px; display: block; margin-right: 0; margin-bottom: 20px; });
+      .media-lg({ font-size: 96px; margin-bottom: 30px;});
+    }
+  }
+
+  &__text {
+    .media-tablet({ font-size: 16px; line-height: 22px; font-weight: 700; margin-bottom: 30px;});
+  }
+
+  &__text--additional {
+    font-weight: 400;
+  }
+}

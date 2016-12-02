@@ -2,14 +2,6 @@ $(document).ready(function() {
 
 	//Slider initialization
 
-	$('.projects__slider').slick({
-		prevArrow: $('.prev'),
-		nextArrow: $('.next'),
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		infinite: false
-	});
-
 	$('.services-slider').slick({
 		prevArrow: $('.services-slider__prev'),
 		nextArrow: $('.services-slider__next'),
@@ -28,6 +20,38 @@ $(document).ready(function() {
 					slidesToShow: 2
 				}
 			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	$('.clients-slider__inner').slick({
+		prevArrow: $('.clients-slider__prev'),
+		nextArrow: $('.clients-slider__next'),
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
+	});
+
+	$('.reviews-slider').slick({
+		prevArrow: $('.reviews-slider__prev'),
+		nextArrow: $('.reviews-slider__next'),
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: true,
+		responsive: [
 			{
 				breakpoint: 768,
 				settings: {
