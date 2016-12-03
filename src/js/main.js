@@ -21,7 +21,7 @@ $(document).ready(function() {
 				}
 			},
 			{
-				breakpoint: 768,
+				breakpoint: 767,
 				settings: {
 					slidesToShow: 1
 				}
@@ -37,7 +37,7 @@ $(document).ready(function() {
 		infinite: true,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 767,
 				settings: {
 					slidesToShow: 2
 				}
@@ -53,23 +53,25 @@ $(document).ready(function() {
 		infinite: true,
 		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 767,
 				settings: {
 					slidesToShow: 1
 				}
 			}
 		]
 	});
+
+
 });
 
 
 // Яндекс карта
-/*ymaps.ready(init);
+ymaps.ready(init);
 var map;
 
 function init() {
 	map = new ymaps.Map('map', {
-		center: [59.900946, 30.353367],
+		center: [59.901664, 30.352359],
 		zoom: 17,
 		controls: []
 	});
@@ -85,13 +87,33 @@ function init() {
 			'</div>'
 	);
 
-	var placemark = new ymaps.Placemark([59.900556, 30.350434], {}, {
+	var placemark = new ymaps.Placemark([59.901621, 30.351394], {}, {
 		hideIconOnBalloonOpen: true,
 		balloonLayout: balloonLayout,
-		balloonOffset: [-40, -140]
+		balloonOffset: [-40, -140],
+		balloonPanelMaxMapArea: 0,
+		iconLayout: 'default#image',
+		iconImageHref: 'img/map-icon.png',
+		iconImageSize: [40, 64]
 	});
 
 	map.geoObjects.add(placemark);
-	map.behaviors.disable('scrollZoom');
-	placemark.balloon.open();
-}*/
+
+	if ($(window).width() >= 768) {
+		placemark.balloon.open();
+	} else {
+		map.behaviors.disable('scrollZoom');
+		map.behaviors.disable('drag');
+	}
+
+	$(window).resize(function () {
+		var width = $(window).width();
+		if (width >= 768 && !placemark.balloon.isOpen()) {
+			placemark.balloon.open();
+			map.behaviors.enable('drag');
+		} else if (width < 768 && placemark.balloon.isOpen()) {
+			placemark.balloon.close();
+			map.behaviors.disable('drag');
+		}
+	});
+}

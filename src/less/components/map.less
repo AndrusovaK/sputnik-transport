@@ -1,7 +1,16 @@
 .map {
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	left: 0;
+	right: 0;
+	height: 215px;
+
+	@media(min-width: 410px) {
+		height: 300px;
+	}
+
+	.media-tablet({ height: 514px;});
+
+	.media-lg({ left: 50%; height: 520px;});
 
 	&__balloon {
 		position: relative;
@@ -61,45 +70,3 @@
 		}
 	}
 }
-
-
-/*
-.contacts {
-	.container {
-		position: relative;
-		z-index: 900;
-	}
-
-	&__inner {
-		position: absolute;
-		bottom: 8rem;
-		left: 28rem;
-
-		.media-lg({ left: 34rem;});
-
-		&.hide {
-			height: 0;
-			opacity: 0;
-		}
-	}
-
-	.phone {
-		color: @text-color;
-	}
-
-	.phone:first-of-type {
-		font-size: 2.25rem;
-		span {
-			font-size: 3.75rem;
-			font-weight: 700;
-		}
-	}
-
-	.phone:last-of-type {
-		font-size: @font-size;
-		span {
-			font-size: 2.25rem;
-			font-weight: 700;
-		}
-	}
-}*/

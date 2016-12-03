@@ -1,0 +1,79 @@
+.footer-contacts {
+
+	&__title {
+		font-size: 44px;
+
+		.media-tablet({ font-size: 72px;});
+		.media-lg({ font-size: 96px;});
+	}
+
+	&__subtitle {
+		font-weight: 700;
+
+		.media-tablet({ font-size: 18px; margin-bottom: 8px;});
+		.media-lg({ font-size: 24px;});
+	}
+
+	&__phones {
+		margin-bottom: 18px;
+
+		.media-tablet({ margin-bottom: 30px;});
+		.media-lg({ margin-bottom: 45px;});
+	}
+
+	.phone {
+		color: @color__red;
+
+		.media-tablet({ font-size: 28px;});
+
+		.media-lg({ font-size: 30px;});
+
+		span {
+			.media-lg({ font-size: 36px;});
+		}
+	}
+
+	.email {
+		font-family: "GothamPro", sans-serif;
+		font-weight: 900;
+
+		.media-tablet({ font-size: 18px;});
+		.media-lg({ font-size: 24px;});
+
+	}
+
+	.btn {
+		margin: 39px 0;
+		width: 276px;
+		height: 55px;
+		line-height: 52px;
+
+		.media-lg({ width: 400px; height: 80px; line-height: 78px;});
+	}
+
+	.map-container {
+		position: relative;
+	}
+
+	.map__wrapper {
+		height: 215px;
+		@media(min-width: 410px) {
+			height: 300px;
+		}
+		.media-tablet({ height: 514px;});
+		.media-lg({ height: 440px;})
+	}
+}
+
+.page-footer {
+	font-size: 12px;
+	line-height: 16px;
+	height: 52px;
+	padding: 12px 0;
+	background: #3e3e3e;
+	color: #ffffff;
+
+	.media-tablet({ height: 70px; padding: 18px 0; font-size: 14px; line-height: 20PX;});
+
+	.media-lg({ height: 80px; background: #bebebe; padding: 23px 0;});
+}
